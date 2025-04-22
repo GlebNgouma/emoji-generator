@@ -16,5 +16,6 @@ jobs:
         run: pnpm add --global @railway/cli
       - name: Deploy to Railway
         run: railway up --service="emoji-generator"
+        continue-on-error: true
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
