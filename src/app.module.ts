@@ -10,9 +10,10 @@ import {
   BrowserInterceptor,
   TransformResponseInterceptor,
 } from './common';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [],
+  imports: [ConfigModule.forRoot()],
   controllers: [AppController],
   providers: [
     AppService,
